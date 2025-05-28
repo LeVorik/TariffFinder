@@ -1,0 +1,92 @@
+﻿<Window x:Class="TariffFinder.CompareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TariffFinder"
+        mc:Ignorable="d"
+        Title="Сравнение тарифов"
+        Width="600" Height="350"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Window.Resources>
+        <local:BrushToLightBrushConverter x:Key="BrushToLightBrushConverter" />
+    </Window.Resources>
+
+    <Border Background="White" CornerRadius="16" BorderBrush="#D1D5DB" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <!-- Заголовок -->
+                <RowDefinition Height="*"/>
+                <!-- Основной контент -->
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <Border Grid.Row="0" Background="#2563EB" CornerRadius="16,16,0,0" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid>
+                    <TextBlock Text="Сравнение тарифов" VerticalAlignment="Center" Margin="16,0,0,0" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                    <Button Content="✕" Width="34" Height="30" 
+                HorizontalAlignment="Right" Margin="0,5,10,5"
+                Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Cursor="Hand"
+                Click="Close_Click"/>
+                </Grid>
+            </Border>
+
+
+            <!-- Основной контент -->
+            <Grid Grid.Row="1" Margin="0,16,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <!-- Названия тарифов -->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Tariff1.Name}" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Tariff2.Name}" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" TextAlignment="Right"/>
+
+                <!-- Цена -->
+                <Border Grid.Row="1" Grid.Column="0" Background="{Binding PriceHighlight1, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff1.Price, StringFormat=Цена: {0:C}}" Foreground="{Binding PriceHighlight1}" FontWeight="SemiBold"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" Background="{Binding PriceHighlight2, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff2.Price, StringFormat=Цена: {0:C}}" Foreground="{Binding PriceHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
+                </Border>
+
+                <!-- Минуты -->
+                <Border Grid.Row="2" Grid.Column="0" Background="{Binding MinutesHighlight1, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff1.Minutes, StringFormat=Минуты: {0}}" Foreground="{Binding MinutesHighlight1}" FontWeight="SemiBold"/>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="1" Background="{Binding MinutesHighlight2, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff2.Minutes, StringFormat=Минуты: {0}}" Foreground="{Binding MinutesHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
+                </Border>
+
+                <!-- Интернет -->
+                <Border Grid.Row="3" Grid.Column="0" Background="{Binding DataHighlight1, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff1.DataGB, StringFormat=Интернет: {0} ГБ}" Foreground="{Binding DataHighlight1}" FontWeight="SemiBold"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="1" Background="{Binding DataHighlight2, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff2.DataGB, StringFormat=Интернет: {0} ГБ}" Foreground="{Binding DataHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
+                </Border>
+
+                <!-- СМС -->
+                <Border Grid.Row="4" Grid.Column="0" Background="{Binding SmsHighlight1, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff1.Sms, StringFormat=СМС: {0}}" Foreground="{Binding SmsHighlight1}" FontWeight="SemiBold"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="1" Background="{Binding SmsHighlight2, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
+                    <TextBlock Text="{Binding Tariff2.Sms, StringFormat=СМС: {0}}" Foreground="{Binding SmsHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

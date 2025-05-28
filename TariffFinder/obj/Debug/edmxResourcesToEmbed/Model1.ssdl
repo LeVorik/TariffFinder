@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Operators">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tariffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperatorId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Minutes" Type="int" Nullable="false" />
+    <Property Name="DataGB" Type="int" Nullable="false" />
+    <Property Name="Sms" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Tariffs__Operato__38996AB5">
+    <End Role="Operators" Type="Self.Operators" Multiplicity="1" />
+    <End Role="Tariffs" Type="Self.Tariffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operators">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tariffs">
+        <PropertyRef Name="OperatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ModelContainer">
+    <EntitySet Name="Operators" EntityType="Self.Operators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tariffs" EntityType="Self.Tariffs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tariffs__Operato__38996AB5" Association="Self.FK__Tariffs__Operato__38996AB5">
+      <End Role="Operators" EntitySet="Operators" />
+      <End Role="Tariffs" EntitySet="Tariffs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

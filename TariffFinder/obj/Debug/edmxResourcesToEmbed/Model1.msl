@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Operators">
+      <EntityTypeMapping TypeName="Model.Operators">
+        <MappingFragment StoreEntitySet="Operators">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tariffs">
+      <EntityTypeMapping TypeName="Model.Tariffs">
+        <MappingFragment StoreEntitySet="Tariffs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Minutes" ColumnName="Minutes" />
+          <ScalarProperty Name="DataGB" ColumnName="DataGB" />
+          <ScalarProperty Name="Sms" ColumnName="Sms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,90 @@
+﻿<Window x:Class="TariffFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TariffFinder"
+        mc:Ignorable="d"
+        Title="TariffComparer"
+        Height="600"
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    
+    <Border CornerRadius="16" Background="{StaticResource BackgroundColor}" BorderBrush="#D1D5DB" BorderThickness="1">
+        <DockPanel>
+            <!-- Кастомный заголовок -->
+            <Border Height="40" Background="{StaticResource AccentColor}" CornerRadius="16,16,0,0" DockPanel.Dock="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid>
+                    <TextBlock Text="Tariff Finder" VerticalAlignment="Center" Margin="16,0,0,0"
+                               FontFamily="{StaticResource AppFont}" FontSize="16" Foreground="White"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                        <Button Content="—" Width="30" Height="30" Click="Minimize_Click" Style="{StaticResource TitleBarButtonStyle}"/>
+                        <Button Content="✕" Width="30" Height="30" Click="Close_Click" Style="{StaticResource TitleBarButtonStyle}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Основной контент -->
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Левая панель -->
+                <StackPanel Grid.Column="0" Margin="16,0,16,0">
+                    <TextBlock Text="Операторы:" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+
+                    <ListBox x:Name="OperatorsListBox"
+                        ItemsSource="{Binding operatorItems, RelativeSource={RelativeSource AncestorType=Window}}"
+                        Background="{StaticResource BackgroundColor}"
+                        BorderThickness="0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected}" Margin="4"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Content="Показать тарифы" Height="40" Background="{StaticResource AccentColor}"
+                            Foreground="White" FontWeight="Bold" Click="ShowTariffsButton_Click"/>
+                </StackPanel>
+
+                <!-- Список тарифов -->
+                <Grid Grid.Column="1" Margin="16,0,16,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Список тарифов:" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+
+                    <ListBox x:Name="TariffsListBox" Grid.Row="1"
+                             Background="{StaticResource CardBackground}" BorderBrush="#D1D5DB" BorderThickness="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Margin="4" Padding="8" Background="White" CornerRadius="8" BorderBrush="#E5E7EB" BorderThickness="1">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <CheckBox IsChecked="{Binding IsSelected}" Margin="0,0,8,0"/>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14"/>
+                                            <TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" FontSize="12" Foreground="Gray"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Button Grid.Row="2" Content="Сравнить выбранные" Height="40" Margin="0,12,0,0"
+                            Background="{StaticResource AccentColor}" Foreground="White"
+                            FontWeight="Bold" Click="CompareButton_Click"/>
+                </Grid>
+            </Grid>
+        </DockPanel>
+    </Border>
+</Window>
