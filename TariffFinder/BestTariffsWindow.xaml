@@ -1,0 +1,53 @@
+﻿<Window x:Class="TariffFinder.BestTariffsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TariffFinder"
+        mc:Ignorable="d"
+        Title="Лучшие тарифы"
+        Height="400" Width="400"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Window.Resources>
+        <local:BoolToHighlightConverter x:Key="BoolToHighlightConverter"/>
+    </Window.Resources>
+    <Border Background="White" CornerRadius="16" BorderBrush="#D1D5DB" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <!-- Заголовок -->
+                <RowDefinition Height="*"/>
+                <!-- Основной контент -->
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <Border Grid.Row="0" Background="#2563EB" CornerRadius="16,0,0,0" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid>
+                    <TextBlock Text="Сравнение тарифов" VerticalAlignment="Center" Margin="16,0,0,0" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                    <Button Content="✕" Width="34" Height="30" 
+                            HorizontalAlignment="Right" Margin="0,5,10,5"
+                            Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Cursor="Hand"
+                            Click="Close_Click"/>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Margin="0,0,0,0">
+                <TextBlock Text="{Binding BestTitle}" FontWeight="Bold" FontSize="18" Margin="16,8,0,0"/>
+                <ListBox ItemsSource="{Binding Tariffs}" Margin="0,40,0,0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{Binding IsBest, Converter={StaticResource BoolToHighlightConverter}}" CornerRadius="8" Padding="8" Margin="0,4">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding DisplayValue}" Foreground="Gray"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

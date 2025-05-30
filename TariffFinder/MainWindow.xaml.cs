@@ -95,6 +95,36 @@ namespace TariffFinder
         {
             Close();
         }
+        private void BestByPrice_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBestTariffsWindow("Лучшие по цене", t => Convert.ToDouble(t.Price), isMin: true);
+        }
+
+        private void BestByMinutes_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBestTariffsWindow("Лучшие по минутам", t => t.Minutes);
+        }
+
+        private void BestByData_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBestTariffsWindow("Лучшие по интернету", t => t.DataGB);
+        }
+
+        private void BestBySms_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBestTariffsWindow("Лучшие по СМС", t => t.Sms);
+        }
+
+        private void ShowBestTariffsWindow(string title, Func<TariffItem, double> selector, bool isMin = false)
+        {
+            var window = new BestTariffsWindow(title, tariffItems, selector, isMin)
+            {
+                Owner = this
+            };
+            window.ShowDialog();
+        }
+
+
     }
 
     public class OperatorItem

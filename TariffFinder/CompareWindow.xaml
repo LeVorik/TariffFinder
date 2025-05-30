@@ -57,10 +57,10 @@
 
                 <!-- Цена -->
                 <Border Grid.Row="1" Grid.Column="0" Background="{Binding PriceHighlight1, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
-                    <TextBlock Text="{Binding Tariff1.Price, StringFormat=Цена: {0:C}}" Foreground="{Binding PriceHighlight1}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding Tariff1.Price, StringFormat=Цена: {0:f} руб/мес}" Foreground="{Binding PriceHighlight1}" FontWeight="SemiBold"/>
                 </Border>
                 <Border Grid.Row="1" Grid.Column="1" Background="{Binding PriceHighlight2, Converter={StaticResource BrushToLightBrushConverter}}" CornerRadius="6" Padding="8" Margin="0,2">
-                    <TextBlock Text="{Binding Tariff2.Price, StringFormat=Цена: {0:C}}" Foreground="{Binding PriceHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
+                    <TextBlock Text="{Binding Tariff2.Price, StringFormat=Цена: {0:f} руб/мес}" Foreground="{Binding PriceHighlight2}" FontWeight="SemiBold" TextAlignment="Right"/>
                 </Border>
 
                 <!-- Минуты -->

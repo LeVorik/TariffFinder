@@ -79,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BestTariffsWindow.xaml.cs">
+      <DependentUpon>BestTariffsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoolToHighlightConverter.cs" />
     <Compile Include="CompareWindow.xaml.cs">
       <DependentUpon>CompareWindow.xaml</DependentUpon>
     </Compile>
@@ -93,6 +97,10 @@
     <Compile Include="Tariffs.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="BestTariffsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CompareWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

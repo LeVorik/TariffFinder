@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\brogo\source\repos\TariffFinder\TariffFinder\obj\Debug\
+C:\Projects\TariffFinder\TariffFinder\obj\Debug\
 TariffFinder
 none
 false
 DEBUG;TRACE
-C:\Users\brogo\source\repos\TariffFinder\TariffFinder\App.xaml
-3-2099736370
+C:\Projects\TariffFinder\TariffFinder\App.xaml
+450149857
 41546833137
-12-1566491732
-18-648171187
-CompareWindow.xaml;MainWindow.xaml;Styles.xaml;
+14-779886032
+18-1786006957
+BestTariffsWindow.xaml;CompareWindow.xaml;MainWindow.xaml;Styles.xaml;
 
-False
+True
 

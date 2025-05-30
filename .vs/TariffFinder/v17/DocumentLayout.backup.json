@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\TariffFinder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__PROJECTS_TARIFFFINDER_TARIFFFINDER_TARIFFFINDERDB.MDF/True/SqlTable/dbo.Tariffs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|c:\\projects\\tarifffinder\\tarifffinder\\besttariffswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\besttariffswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|c:\\projects\\tarifffinder\\tarifffinder\\comparewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\comparewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|c:\\projects\\tarifffinder\\tarifffinder\\besttariffswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\besttariffswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|c:\\projects\\tarifffinder\\tarifffinder\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|C:\\Projects\\TariffFinder\\tarifffinder\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|C:\\Projects\\TariffFinder\\tarifffinder\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9881122-DEAE-419A-8B01-5FEDD250804B}|TariffFinder\\TariffFinder.csproj|solutionrelative:tarifffinder\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Tariffs [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__PROJECTS_TARIFFFINDER_TARIFFFINDER_TARIFFFINDERDB.MDF/True/SqlTable/dbo.Tariffs.sql",
+              "ToolTip": "dbo.Tariffs [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-30T12:51:44.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BestTariffsWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\BestTariffsWindow.xaml",
+              "RelativeDocumentMoniker": "TariffFinder\\BestTariffsWindow.xaml",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\BestTariffsWindow.xaml",
+              "RelativeToolTip": "TariffFinder\\BestTariffsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T12:08:26.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CompareWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\CompareWindow.xaml",
+              "RelativeDocumentMoniker": "TariffFinder\\CompareWindow.xaml",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\CompareWindow.xaml",
+              "RelativeToolTip": "TariffFinder\\CompareWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T11:55:34.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\Styles.xaml",
+              "RelativeDocumentMoniker": "TariffFinder\\Styles.xaml",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\Styles.xaml",
+              "RelativeToolTip": "TariffFinder\\Styles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T11:43:18.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\App.xaml",
+              "RelativeDocumentMoniker": "TariffFinder\\App.xaml",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\App.xaml",
+              "RelativeToolTip": "TariffFinder\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T11:43:18.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TariffFinder\\MainWindow.xaml",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\MainWindow.xaml",
+              "RelativeToolTip": "TariffFinder\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T11:43:18.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BestTariffsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\TariffFinder\\TariffFinder\\BestTariffsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TariffFinder\\BestTariffsWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\TariffFinder\\TariffFinder\\BestTariffsWindow.xaml.cs",
+              "RelativeToolTip": "TariffFinder\\BestTariffsWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA0wD8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T12:35:49.676Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -63,6 +63,15 @@
 
                     <TextBlock Text="Список тарифов:" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
 
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,28,0,8" HorizontalAlignment="Left" >
+                        <TextBlock Text="Лучший по: " VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,8,0"/>
+                        <Button Content="Цене" Style="{StaticResource FilterButtonStyle}" Click="BestByPrice_Click" Margin="0,0,4,0"/>
+                        <Button Content="Минутам" Style="{StaticResource FilterButtonStyle}" Click="BestByMinutes_Click" Margin="0,0,4,0"/>
+                        <Button Content="ГБ" Style="{StaticResource FilterButtonStyle}" Click="BestByData_Click" Margin="0,0,4,0"/>
+                        <Button Content="СМС" Style="{StaticResource FilterButtonStyle}" Click="BestBySms_Click"/>
+                    </StackPanel>
+
+
                     <ListBox x:Name="TariffsListBox" Grid.Row="1"
                              Background="{StaticResource CardBackground}" BorderBrush="#D1D5DB" BorderThickness="1">
                         <ListBox.ItemTemplate>
@@ -72,7 +81,7 @@
                                         <CheckBox IsChecked="{Binding IsSelected}" Margin="0,0,8,0"/>
                                         <StackPanel>
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14"/>
-                                            <TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" FontSize="12" Foreground="Gray"/>
+                                            <TextBlock Text="{Binding Price, StringFormat='Цена: {0:f} руб/мес'}" FontSize="12" Foreground="Gray"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Border>
